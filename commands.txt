@@ -1,3 +1,6 @@
 1. to use django frame work and also add this framewrok in settings- installed app 
         pip isntall djangorestframework
-2.
+2. it help in testing it need to indentify which testing is need to be here
+        pip install coverage
+if you use vitural env then type the code below to skip the env file
+        coverage run --omit='*/venv/*' manage.py test

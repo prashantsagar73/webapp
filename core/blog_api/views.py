@@ -7,10 +7,16 @@ from .serializers import PostSerializer
 class PostList(generics.ListCreateAPIView):
     queryset = Post.postobjects.all()
     serializer_class = PostSerializer
-    pass
+    # pass
 
 # RetrieveDestroyAPIView
 # Used for read or delete endpoints to represent a single model instance.
 class PostDetail(generics.RetrieveDestroyAPIView):
-    pass
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    # pass
 
+
+
+# for more  option you can go through this site - you can control the api views->like-delelte-create-views
+# https://www.django-rest-framework.org/api-guide/generic-views/
