@@ -2,3 +2,7 @@
     npx create-react-app blogapi .
 2. start react
     npm start
+3. dom for dom manuplutation
+    npm install react-router-dom
+4. for material ui 
+    npm install @material-ui/core        
