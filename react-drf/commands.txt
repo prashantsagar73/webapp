@@ -1,0 +1,4 @@
+1. install react app
+    npx create-react-app blogapi .
+2. start react
+    npm start
