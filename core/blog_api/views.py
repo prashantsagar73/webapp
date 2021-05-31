@@ -1,10 +1,13 @@
 from rest_framework import generics
 from blog.models import Post
 from .serializers import PostSerializer
+from rest_framework.permissions import IsAdminUser, DjangoModelPermissionsOrAnonReadOnly
 
 # ListCreateAPIView
 # Used for read-write endpoints to represent a collection of model instances.
 class PostList(generics.ListCreateAPIView):
+    # permission_classes = [IsAdminUser ] #-> only aunthecited admin can see the data api
+    permission_classes = [DjangoModelPermissionsOrAnonReadOnly ] #-> any usr can view and update or add data through api
     queryset = Post.postobjects.all()
     serializer_class = PostSerializer
     # pass

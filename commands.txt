@@ -4,3 +4,7 @@
         pip install coverage
 if you use vitural env then type the code below to skip the env file
         coverage run --omit='*/venv/*' manage.py test
+3. to connect two antothe framework with django
+        A Django App that adds Cross-Origin Resource Sharing (CORS) 
+        headers to responses. This allows in-browser requests to your Django application from other origins.        
+        pip install django-cors-headers

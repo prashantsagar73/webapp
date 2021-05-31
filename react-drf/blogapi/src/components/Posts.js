@@ -49,7 +49,7 @@ const Posts = (props) => {
 								<Card className={classes.card}>
 									<CardMedia
 										className={classes.cardMedia}
-										image="https://source.unsplash.com/random"
+										image="https://source.unsplash.com/collection/computer/300x200"
 										title="Image title"
 									/>
 									<CardContent className={classes.cardContent}>
