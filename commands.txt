@@ -8,3 +8,5 @@ if you use vitural env then type the code below to skip the env file
         A Django App that adds Cross-Origin Resource Sharing (CORS) 
         headers to responses. This allows in-browser requests to your Django application from other origins.        
         pip install django-cors-headers
+4. Simple JWT for JWT authentication process- https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation
+        pip install djangorestframework-simplejwt
