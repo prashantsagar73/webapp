@@ -10,3 +10,9 @@ if you use vitural env then type the code below to skip the env file
         pip install django-cors-headers
 4. Simple JWT for JWT authentication process- https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation
         pip install djangorestframework-simplejwt
+
+Documentation of api         
+5. YAML is a data serialization format designed for human readability and interaction with scripting languages.
+        PyYAML is a YAML parser and emitter for Python.- https://pypi.org/project/PyYAML/
+        pip install PyYAML  +   pip install uritemplate     
+        https://pypi.org/project/uritemplate/ this help schema to prvide a better view 
