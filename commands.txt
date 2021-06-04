@@ -16,3 +16,6 @@ Documentation of api
         PyYAML is a YAML parser and emitter for Python.- https://pypi.org/project/PyYAML/
         pip install PyYAML  +   pip install uritemplate     
         https://pypi.org/project/uritemplate/ this help schema to prvide a better view 
+
+5.1 to get better view use core api for graphiccal interface
+        pip install coreapi
