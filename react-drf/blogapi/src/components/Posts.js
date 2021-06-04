@@ -6,6 +6,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
+// import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	cardMedia: {
@@ -47,11 +49,17 @@ const Posts = (props) => {
 							// Enterprise card is full width at sm breakpoint
 							<Grid item key={post.id} xs={12} md={4}>
 								<Card className={classes.card}>
+									<Link
+										color= "textPrimary"
+										href= { 'post/' + post.slug}
+										className= { classes.link }
+									>
 									<CardMedia
 										className={classes.cardMedia}
 										image="https://source.unsplash.com/collection/computer/300x200"
 										title="Image title"
 									/>
+									</Link>
 									<CardContent className={classes.cardContent}>
 										<Typography
 											gutterBottom
