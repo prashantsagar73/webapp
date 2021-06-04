@@ -19,6 +19,7 @@ class PostUserWritePermission(BasePermission):
 
 
 # use viewsets that combine two or multiple class in one 
+# automatically create route for every post 
 class PostList(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     serializer_class = PostSerializer
