@@ -19,7 +19,7 @@ class PostUserWritePermission(BasePermission):
 
 
 # use viewsets that combine two or multiple class in one 
-# automatically create route for every post 
+
 class PostList(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     serializer_class = PostSerializer
@@ -31,6 +31,19 @@ class PostList(viewsets.ModelViewSet):
     # Define Custom Queryset
     def get_queryset(self):
         return Post.objects.all()
+
+# viewsets using viewsets
+# class PostList(viewsets.ViewSet):
+#     permission_classes = [IsAuthenticated]
+#     queryset = Post.postobjects.all()
+#     def list(self, requerst):
+#         serializer_class = PostSerializer(self.queryset, many=True)
+#         return Response(serializer_class.data)
+#         # getting indivisual data from database
+#     def retrive(self, request, pk=None):
+#         post = get_object_or_404(self.queryset, pk=pk)
+#         serializer_class = PostSerializer(post)
+#         return Response(serializer_class.data)
 
 
 
