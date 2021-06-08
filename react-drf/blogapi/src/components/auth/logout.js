@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react';
-import axiosInstance from '../axios';
+import React, { useEffect } from 'react';
+import axiosInstance from '../../axios';
 import { useHistory } from 'react-router-dom';
 
 export default function SignUp() {
