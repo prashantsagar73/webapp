@@ -19,3 +19,6 @@ Documentation of api
 
 5.1 to get better view use core api for graphiccal interface
         pip install coreapi
+
+6. pillow to manupalte images or different oprations
+        pip install pillow        
