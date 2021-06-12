@@ -33,7 +33,7 @@ oauth testing in terminal
 
 Oauth - Get Token
 
-curl -X POST -d "client_id=CTrbHZNtiS2VrbN9iVaVzPRHU13sHdHZd6bbMoKZclient_secret=YQ0gtl7UXAJZK596bPetswWYYYyiG8Zq1zZcTytvs1f0t3cPMX2d0fTJbgNVq9eZ3qOvDTL0MekujuHvkaeiFn5ALjQ7yBKO3XYJWzXKQ4vqA4670krGm6KXf6wc2F33grant_type=password&username=sagar@fmail.com.com&password=sagar" http://localhost:127.0.0.1:8000/auth/token/
+curl -X POST -d "client_id=CTrbHZNtiS2VrbN9iVaVzPRHU13sHdHZd6bbMoKZclient_secret=YQ0gtl7UXAJZK596bPetswWYYYyiG8Zq1zZcTytvs1f0t3cPMX2d0fTJbgNVq9eZ3qOvDTL0MekujuHvkaeiFn5ALjQ7yBKO3XYJWzXKQ4vqA4670krGm6KXf6wc2F33grant_type=password&username=sagar@fmail.com.com&password=sagar" http://localhost:8000/auth/token/
 
 Oauth - Convert Facebook Token
 

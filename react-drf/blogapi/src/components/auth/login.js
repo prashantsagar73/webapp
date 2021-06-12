@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import axiosInstance from '../../axios';
+import axiosInstance from '../../axios/login';
 import { useHistory } from 'react-router-dom';
+import FbLogin from 'react-facebook-login';
+import FacebookLogin from '../../axios/facebooklogin'; 
 //MaterialUI
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -56,22 +58,24 @@ export default function SignIn() {
 		console.log(formData);
 
 		axiosInstance
-			.post(`token/`, {
-				email: formData.email,
+			.post(`auth/token/`, {
+				grant_type: 'password',
+				username : formData.email,
 				password: formData.password,
+				clinet_id: 't36PcCYVD85vDhKFIgAuCuk9wCjSjt2RBYL5ONmT',
+				client_secret: 'Nz9Jw4gEsyYdfl64W7ghN9HRDEzZtliNfLP25cKPI0DFPETRTLslYRKFlzQMvuUpNE1Nu8OaUGjnIHB8JEZWdo3zsKQT34j49zgNB63HSCquDBmCqyWboDVFuSiwdRao',
 			})
 			.then((res) => {
-				localStorage.setItem('access_token', res.data.access);
-				localStorage.setItem('refresh_token', res.data.refresh);
-				axiosInstance.defaults.headers['Authorization'] =
-					'JWT ' + localStorage.getItem('access_token');
-				history.push('/');
-				//console.log(res);
-				//console.log(res.data);
+				// console.log(res);
+				localStorage.setItem('access_token', res.data.access_token);
+				localStorage.setItem('refresh_token', res.data.refresh_token );
 			});
 	};
-
+	const responseFacebook = async (response) => {
+		FacebookLogin(response.accessToken);
+	};
 	const classes = useStyles();
+	
 
 	return (
 		<Container component="main" maxWidth="xs">
@@ -120,6 +124,11 @@ export default function SignIn() {
 					>
 						Sign In
 					</Button>
+					<FbLogin
+						appId="327477919008700"
+						fields="name,email,picture"
+						callback={responseFacebook}
+					/>
 					<Grid container>
 						<Grid item xs>
 							<Link href="#" variant="body2">
