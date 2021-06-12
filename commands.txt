@@ -21,4 +21,23 @@ Documentation of api
         pip install coreapi
 
 6. pillow to manupalte images or different oprations
-        pip install pillow        
+        pip install pillow   
+
+7. for social authentication 
+        pip install drf_social_oauth2   
+        
+        7.1 and  uninstall djangorestframework-simplejwt 
+
+==========
+oauth testing in terminal 
+
+Oauth - Get Token
+
+curl -X POST -d "client_id=CTrbHZNtiS2VrbN9iVaVzPRHU13sHdHZd6bbMoKZclient_secret=YQ0gtl7UXAJZK596bPetswWYYYyiG8Zq1zZcTytvs1f0t3cPMX2d0fTJbgNVq9eZ3qOvDTL0MekujuHvkaeiFn5ALjQ7yBKO3XYJWzXKQ4vqA4670krGm6KXf6wc2F33grant_type=password&username=sagar@fmail.com.com&password=sagar" http://localhost:127.0.0.1:8000/auth/token/
+
+Oauth - Convert Facebook Token
+
+curl -X POST -d "grant_type=convert_token&client_id=zSPoGtzGWjsWUedEgMq3bzfkecmerIpfUEfVu1l2&client_secret=nL2wwNM7OKggfmlASt6Sp6dniaNWLsYLi8S7Ju1HujxsJVVXef5tHTH7SIdKIKzSY67VfQ0dmOSCVAMwPhYR5w1DCrv49sl95USiHRvkOvat5VrhSA3OUQWHoJtzedCb&backend=facebook&token=EAAGCUanxCuwBANvMUkzf4ZCjFglhC6vZADtt4xol9KhF0n9bPkubFgZADZC3EDEjWN7F8txKhjJbewBkl5VZBlZCZA5RJ9Xtxs5qTCxBx1VxGDsjzVRbsJMktTkZBvcNrTWzkfjwGlgZB8JOz8VByEdAZAPWPcnOnR8NjLBCFu4OrbHirZCSScJpgHXeofluudRwDcZD" http://localhost:8000/auth/convert-token
+
+curl -X POST -d "grant_type=convert_token&client_id=gMr6qHMnG5LEj3wKnmPjr7EdJ5ZFM10oX29pBORh&client_secret=<client_secret>&backend=facebook&token=<facebook_token>" http://localhost:8000/auth/convert-token
+
